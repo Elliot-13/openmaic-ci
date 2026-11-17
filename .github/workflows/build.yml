@@ -20,7 +20,8 @@ on:
 
 env:
   UPSTREAM: https://github.com/THU-MAIC/OpenMAIC.git
-  IMAGE: ghcr.io/${{ github.repository_owner }}/openmaic
+  # GHCR 要求镜像名全小写；github.repository_owner 带大写（Elliot-13）会报 invalid tag
+  IMAGE: ghcr.io/elliot-13/openmaic
 
 jobs:
   build:
